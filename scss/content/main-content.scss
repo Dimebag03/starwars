@@ -1,0 +1,136 @@
+.content {
+    color: $main-text-color;
+    min-height: 400px;
+
+    .search-box {
+        display: block;
+        width: 100%;
+        position: relative;
+
+        .search-input {
+            width: 493px;
+            margin: 0 auto;
+
+	        input {
+	        	color: $main-text-color;
+	            width: 100%;
+	            box-sizing: border-box;
+	            border: 1px solid $main-color;
+	            background-color: transparent;
+	            border-radius: 2px;
+	            padding: 10px;
+	            display: block;
+	            transition: 0.2s;
+
+	            &:hover {
+	            	color: #FFF;
+	            }
+
+	            &:focus {
+	            	color: #FFF;
+	            	background-color: $saber;
+	            	box-shadow: 0px 0px 10px -2px $saber;
+	            }
+	        }
+
+	        &:before {
+	        	content: '';
+	        	position: absolute;
+            	width: 0px;
+	        	height: 38px;
+	        	background-color: $saber;
+	        	transition: 0.2s;
+	        	z-index: -1;
+	        }
+
+	        &:hover:before {
+	        	content: '';
+	        	position: absolute;
+            	width: 503px;
+	        	height: 38px;
+	        	background-color: $saber;
+	        	box-shadow: 0px 0px 10px -2px $saber;
+	        	z-index: -1;
+	        }
+        }
+
+        button {
+        	position: absolute;
+        	top: 0;
+			right: 237px;
+			padding: 8px;
+        }
+    }
+
+    .choose-side {
+    	text-align: center;
+
+    	i {
+    		color: #888;
+    		cursor: pointer;
+    		font-size: 250px;
+    		transition: 0.2s;
+
+    		&.fa-empire:hover {
+    			color: $empire-color;
+    		}
+
+    		&.fa-rebel:hover {
+    			color: $rebel-color;
+    		}
+    	}
+    }
+
+    h1.main-title {
+        text-align: center;
+        text-transform: uppercase;
+        margin: 20px 0;
+    }
+
+    .blocks {
+    	display: inline-block;
+    	width: 100%;
+    	margin-top: 50px;
+
+    	.block {
+    		float: left;
+    		width: 50%;
+    		padding: 0 15px;
+    		height: 225px;
+    		overflow: hidden;
+
+    		h2	{
+    			text-align: center;
+    			text-transform: uppercase;
+    		}
+
+    		p {
+    			text-align: justify;
+    		}
+    	}
+    }
+
+    .tablatura-body {
+        margin: 20px 0;
+        border-top: 4px solid #333;
+        border-bottom: 4px solid #333;
+        border-radius: 4px;
+    }
+
+    .corda-row {
+        position: relative;
+        width: 100%;
+        height: 20px; 
+
+        .corda { 
+            position: absolute;
+            top: 9px;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background-color: #333;
+            display: block;
+            margin: 0;
+        }
+    }
+}

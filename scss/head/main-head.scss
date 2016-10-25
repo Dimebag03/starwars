@@ -1,0 +1,56 @@
+header {
+    width: 100%;
+    background-color: $main-color;
+    border-bottom: 2px solid darken($main-color, 10%);
+}
+
+.menu {
+
+    ul {
+        height: 50px;
+
+        li {
+            float: left;
+
+            a {
+                display: block;
+                color: #FFF;
+                text-decoration: none;
+                padding: 19px;
+                transition: 0.2s;
+                font-size: 12px;
+
+                &:hover {
+                    background-color: darken($main-color, 10%);
+                }
+            }
+        }
+
+        li.right {
+            float: right;
+        }
+
+        li.logo {
+
+        	a {
+		    	position:relative;
+		    	height: 14px;
+				width: 6px;
+
+				&:before {
+				    content: $logo;
+				    font-family: FontAwesome;
+	                font-size: 35px;
+	                padding: 5px;
+				    left:0px;
+				    position:absolute;
+				    top:0;
+		        }
+
+                &:hover {
+                    background-color: $main-color;
+                }
+		    }
+        }
+    }
+}

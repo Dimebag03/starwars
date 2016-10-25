@@ -1,0 +1,35 @@
+@import 'reset';
+@import 'variables';
+
+html {
+	$logo: $no-logo;
+	$saber: $no-saber;
+	$main-color: $no-color;
+
+	@import 'global';
+	@import 'head/main-head';
+	@import 'content/main-content';
+	@import 'footer/main-footer';
+
+	&.empire {
+		$logo: $empire-logo;
+		$saber: $empire-saber;
+		$main-color: $empire-color;
+
+		@import 'global';
+		@import 'head/main-head';
+		@import 'content/main-content';
+		@import 'footer/main-footer';
+	}
+
+	&.rebel {
+		$logo: $rebel-logo;
+		$saber: $rebel-saber;
+		$main-color: $rebel-color;
+
+		@import 'global';
+		@import 'head/main-head';
+		@import 'content/main-content';
+		@import 'footer/main-footer';
+	}
+}
